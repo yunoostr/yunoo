@@ -1,0 +1,215 @@
+---
+const socials = [
+	{
+		label: "X",
+		href: "https://x.com/yunoo_dev",
+		icon: "M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z",
+	},
+	{
+		label: "GitHub",
+		href: "https://github.com/yunoostr",
+		icon: "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12",
+	},
+	{
+		label: "YouTube",
+		href: "https://www.youtube.com/@Yunoo-dev",
+		icon: "M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z",
+	},
+];
+---
+
+<section id="bio">
+	<div class="fade-up mb-6 flex items-center justify-between">
+		<div class="flex items-center gap-3">
+			<h1 data-yunoo class="cursor-default text-3xl font-semibold text-foreground/70 select-none hover:cursor-pointer">Yunoo</h1>
+			<span data-yunoo-msg aria-live="polite" class="text-sm text-muted-foreground opacity-0 transition-opacity duration-300"></span>
+		</div>
+		<!-- aria-pressed="true" = sounds on. Icons from lucide (volume-2 / volume-x). -->
+		<button
+			type="button"
+			data-sound-toggle
+			aria-pressed="true"
+			aria-label="Sound effects"
+			class="group rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+		>
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden size-4 group-aria-pressed:block" aria-hidden="true">
+				<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" />
+				<path d="M16 9a5 5 0 0 1 0 6" />
+				<path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+			</svg>
+			<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4 group-aria-pressed:hidden" aria-hidden="true">
+				<path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" />
+				<line x1="22" x2="16" y1="9" y2="15" />
+				<line x1="16" x2="22" y1="9" y2="15" />
+			</svg>
+		</button>
+	</div>
+	<p class="fade-up delay-100 leading-relaxed text-muted-foreground">
+		Software engineer based in Grenoble, at
+		<span class="group relative inline-block" data-hover-card>
+			<a
+				target="_blank"
+				href="https://countact.fr"
+				data-pop2
+				click-sound
+				class="inline-flex items-center rounded-md border border-primary/20 bg-primary/10 px-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/15 ml-1"
+			>
+				Countact
+			</a>
+			<span
+				class="invisible absolute top-full left-0 z-10 pt-2 origin-top-left opacity-0 scale-75 transition duration-200 ease-[cubic-bezier(0.36,0,0.66,-0.56)] group-hover:visible group-hover:opacity-100 group-hover:scale-100 group-hover:delay-200 group-hover:duration-300 group-hover:ease-[cubic-bezier(0.34,1.56,0.64,1)] group-focus-within:visible group-focus-within:opacity-100 group-focus-within:scale-100 group-focus-within:duration-300 group-focus-within:ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+			>
+				<span
+					data-card
+					class="block w-72 rounded-lg border bg-popover p-4 text-sm text-popover-foreground shadow-md [--r:0deg] [--x:0px] [--y:0px] translate-x-(--x) translate-y-(--y) rotate-(--r) transition-[translate,rotate] duration-300 ease-out"
+				>
+					<span class="mt-1 block text-muted-foreground">
+						Safety software: evacuating people when things go wrong, and keeping companies compliant with regulations.
+					</span>
+				</span>
+			</span>
+		</span>.
+		I work across the stack, from front-end to cloud and DevOps, and care most about things that scale and look good doing it. Off the clock: anime, a bit of marketing and sales.
+	</p>
+	<ul class="fade-up delay-200 mt-6 flex gap-4">
+		{socials.map(({ label, href, icon }) => (
+			<li>
+				<a
+					href={href}
+					target="_blank"
+					aria-label={label}
+					data-pop
+					click-sound
+					class="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+				>
+					<svg viewBox="0 0 24 24" fill="currentColor" class="size-4" aria-hidden="true"><path d={icon} /></svg>
+				</a>
+			</li>
+		))}
+	</ul>
+</section>
+
+<script>
+	import popUrl from "../assets/soft-pop.mp3";
+	import popUrl2 from "../assets/bubble-pop.mp3";
+	import clickUrl from "../assets/bubble-click.mp3";
+
+	// Every sound goes through here so the speaker button can mute them all at once.
+	const sounds: HTMLAudioElement[] = [];
+	let muted = false;
+	try {
+		muted = localStorage.getItem("muted") === "1"; // remember the visitor's choice
+	} catch {}
+	const sound = (url: string, volume: number) => {
+		const audio = new Audio(url);
+		audio.volume = volume;
+		audio.muted = muted;
+		sounds.push(audio);
+		return audio;
+	};
+
+	const toggle = document.querySelector<HTMLButtonElement>("[data-sound-toggle]");
+	toggle?.setAttribute("aria-pressed", String(!muted));
+	// Clicking it also counts as the user gesture that unlocks audio in the browser.
+	toggle?.addEventListener("click", () => {
+		muted = !muted;
+		for (const audio of sounds) audio.muted = muted;
+		toggle.setAttribute("aria-pressed", String(!muted));
+		try {
+			localStorage.setItem("muted", muted ? "1" : "0");
+		} catch {}
+	});
+
+	const pop = sound(popUrl, 0.1);
+	for (const link of document.querySelectorAll("[data-pop]")) {
+		link.addEventListener("pointerenter", () => {
+			pop.currentTime = 0;
+			// Browsers block audio until the visitor has clicked/typed once on the page; ignore that rejection.
+			pop.play().catch(() => {});
+		});
+	}
+	const pop2 = sound(popUrl2, 0.15);
+	for (const link of document.querySelectorAll("[data-pop2]")) {
+		link.addEventListener("pointerenter", () => {
+			pop2.currentTime = 0;
+			// Browsers block audio until the visitor has clicked/typed once on the page; ignore that rejection.
+			pop2.play().catch(() => {});
+		});
+	}
+
+	const popClick = sound(clickUrl, 0.1);
+	document.addEventListener("click", (e) => {
+		if (e.target instanceof Element && e.target.closest("[click-sound]")) {
+			popClick.currentTime = 0;
+			// Browsers block audio until the visitor has clicked/typed once on the page; ignore that rejection.
+			popClick.play().catch(() => {});
+		}
+	});
+
+	// Easter egg: click "Yunoo" 5 times in a row.
+	const yunoo = document.querySelector<HTMLElement>("[data-yunoo]");
+	const msg = document.querySelector<HTMLElement>("[data-yunoo-msg]");
+	if (yunoo && msg) {
+		const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+		const tick = sound(popUrl, 0.1);
+		tick.preservesPitch = false; // so playbackRate raises the pitch
+		let clicks = 0;
+		let resetTimer: number | undefined;
+		let hideTimer: number | undefined;
+
+		yunoo.addEventListener("click", () => {
+			clearTimeout(resetTimer);
+			resetTimer = window.setTimeout(() => (clicks = 0), 1000); // streak breaks after 1s idle
+			clicks++;
+
+			if (clicks < 5) {
+				// Each click pops a little higher and a little bigger.
+				tick.playbackRate = 1 + clicks * 0.15;
+				tick.currentTime = 0;
+				tick.play().catch(() => {});
+				if (!calm) yunoo.animate([{ scale: 1 }, { scale: 1 + clicks * 0.04 }, { scale: 1 }], { duration: 150 });
+				return;
+			}
+
+			clicks = 0;
+			pop2.currentTime = 0;
+			pop2.play().catch(() => {});
+			if (!calm) {
+				yunoo.animate(
+					[
+						{ scale: 1, rotate: "0deg" },
+						{ scale: 1.3, rotate: "-6deg" },
+						{ scale: 0.95, rotate: "3deg" },
+						{ scale: 1, rotate: "0deg" },
+					],
+					{ duration: 600, easing: "cubic-bezier(0.34, 1.56, 0.64, 1)" },
+				);
+			}
+			msg.textContent = "ok ok, you found me :)";
+			msg.classList.replace("opacity-0", "opacity-100");
+			clearTimeout(hideTimer);
+			hideTimer = window.setTimeout(() => msg.classList.replace("opacity-100", "opacity-0"), 2500);
+		});
+	}
+
+	const root = document.querySelector<HTMLElement>("[data-hover-card]");
+	const badge = root?.querySelector("a");
+	const card = root?.querySelector<HTMLElement>("[data-card]");
+
+	if (root && badge && card && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+		const set = (x: number, y: number, r: number) => {
+			card.style.setProperty("--x", `${x}px`);
+			card.style.setProperty("--y", `${y}px`);
+			card.style.setProperty("--r", `${r}deg`);
+		};
+
+		// Only track over the badge, so the card stays put once the cursor moves onto it.
+		badge.addEventListener("pointermove", (e) => {
+			const b = badge.getBoundingClientRect();
+			const dx = (e.clientX - b.left) / b.width - 0.5; // -0.5 → 0.5
+			const dy = (e.clientY - b.top) / b.height - 0.5;
+			set(dx * 24, dy * 8, dx * 4);
+		});
+		root.addEventListener("pointerleave", () => set(0, 0, 0));
+	}
+</script>

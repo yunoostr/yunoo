@@ -1,0 +1,47 @@
+---
+const experiences = [
+	{
+		company: "Countact",
+		href: "https://countact.fr",
+		location: "Grenoble",
+		roles: [
+			{ title: "Project Lead", type: "Full-time", period: "Oct 2024 - Present" },
+			{ title: "Full Stack Developer", type: "Fixed-term", period: "Sep 2023 - Oct 2024" },
+			{ title: "Full Stack Developer", type: "Apprenticeship", period: "Sep 2022 - Sep 2023" },
+		],
+	},
+	{
+		company: "Ice Development",
+		location: "Lyon",
+		roles: [{ title: "Front-end Developer", type: "Internship", period: "May 2022 - Jul 2022" }],
+	},
+];
+---
+
+<section id="experience">
+	<h2 class="fade-up delay-300 mb-6 text-xl font-semibold text-foreground/70">Experience</h2>
+	<ul class="flex flex-col gap-8">
+		{experiences.map(({ company, href, location, roles }, i) => (
+			<li class="fade-up" style={`animation-delay: ${400 + i * 100}ms`}>
+				<div class="mb-3 flex items-baseline justify-between gap-4">
+					{href ? (
+						<a href={href} target="_blank" class="font-medium text-foreground/80 hover:text-foreground">{company}</a>
+					) : (
+						<span class="font-medium text-foreground/80">{company}</span>
+					)}
+					<span class="text-sm text-muted-foreground">{location}</span>
+				</div>
+				<ul class="flex flex-col gap-3 border-l pl-4">
+					{roles.map(({ title, type, period }) => (
+						<li class="flex items-baseline justify-between gap-4 text-sm">
+							<span class="text-foreground/70">
+								{title} <span class="text-primary text-xs ml-1">{type}</span>
+							</span>
+							<span class="shrink-0 text-muted-foreground tabular-nums">{period}</span>
+						</li>
+					))}
+				</ul>
+			</li>
+		))}
+	</ul>
+</section>
