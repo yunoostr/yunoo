@@ -2,8 +2,8 @@
 import "../styles/global.css";
 import { Font } from 'astro:assets';
 
-interface Props { title?: string; description?: string; lang?: string }
-const { title = "yunoo", description, lang = "en" } = Astro.props;
+interface Props { title?: string; description?: string; lang?: string; image?: string }
+const { title = "yunoo", description, lang = "en", image } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,6 +18,10 @@ const { title = "yunoo", description, lang = "en" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		{description && <meta name="description" content={description} />}
 		<title>{title}</title>
+		<meta property="og:title" content={title} />
+		{description && <meta property="og:description" content={description} />}
+		{image && <meta property="og:image" content={new URL(image, Astro.site)} />}
+		{image && <meta name="twitter:card" content="summary_large_image" />}
 	</head>
 	<body>
 		<slot />
