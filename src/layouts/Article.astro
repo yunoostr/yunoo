@@ -35,4 +35,18 @@ const date = new Date(frontmatter.date).toLocaleDateString("fr-FR", { day: "nume
 	.article :global(table) { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 	.article :global(th), .article :global(td) { border-bottom: 1px solid var(--border); padding: 0.5rem 0.4rem; text-align: left; }
 	.article :global(th) { color: var(--foreground); font-weight: 600; }
+	/* inline SVG diagrams: theme colours, so they follow light / dark */
+	.article :global(.dg) { display: block; width: 100%; height: auto; max-width: 560px; margin: 1.75rem auto; }
+	.article :global(.dg.wide) { max-width: 680px; }
+	.article :global(.dg .b) { fill: var(--card); stroke: var(--border); stroke-width: 1.5; }
+	.article :global(.dg .bp) { fill: var(--primary); }
+	.article :global(.dg .t) { fill: var(--foreground); font: 600 17px var(--font-sans); }
+	.article :global(.dg .tp) { fill: var(--primary-foreground); font: 600 17px var(--font-sans); }
+	.article :global(.dg .s) { fill: var(--muted-foreground); font: 400 14px var(--font-sans); }
+	.article :global(.dg .sp) { fill: var(--primary); font: 600 14px var(--font-sans); }
+	.article :global(.dg .l) { stroke: var(--muted-foreground); stroke-width: 1.75; fill: none; }
+	.article :global(.dg .lp) { stroke: var(--primary); stroke-width: 2; fill: none; }
+	.article :global(.dg .dash) { stroke-dasharray: 6 6; }
+	.article :global(.dg .ah) { fill: var(--muted-foreground); }
+	.article :global(.dg .ahp) { fill: var(--primary); }
 </style>
