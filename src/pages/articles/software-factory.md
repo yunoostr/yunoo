@@ -3,6 +3,7 @@ layout: ../../layouts/Article.astro
 title: Monter ta software factory, des tickets Linear codés par un agent toutes les heures
 description: Le guide pas à pas pour brancher Linear sur un agent de code (Claude Code), le faire tourner sur un VPS ou dans GitHub Actions, et le laisser ouvrir des PR tout seul.
 date: 2026-10-17
+image: /software-factory/og.png
 ---
 
 Une software factory, c'est une usine à logiciels. Tu écris un ticket, et des agents IA font le reste : ils lisent le ticket, écrivent le code, lancent les tests, corrigent ce qui casse, et t'envoient une pull request. Toi, tu ne codes plus le ticket. Tu entretiens l'usine.
