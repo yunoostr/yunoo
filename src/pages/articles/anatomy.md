@@ -3,6 +3,7 @@ layout: ../../layouts/Article.astro
 title: Installer et utiliser Anatomy, le skill qui transforme un concept en machine
 description: Le guide pas à pas pour installer Anatomy dans Claude Code et créer ta première machine animée, même si tu débutes.
 date: 2026-10-15
+image: /anatomy/og-card.png
 ---
 
 Anatomy est un skill gratuit et open source pour Claude Code. Tu lui donnes un concept technique à expliquer (un cache, une file d'attente, une table de hachage…), et il invente un vrai objet qui marche exactement pareil. Une étagère, une serrure, des tubes pneumatiques. Il le dessine en 3D isométrique, l'anime, et tu peux jouer avec à la souris.

@@ -3,6 +3,7 @@ layout: ../../layouts/Article.astro
 title: Installer Reverse Engineer Anything (REA) sur Windows ou Linux
 description: Le guide pas à pas pour installer REA en local et le brancher à ton agent IA (Claude Code, Cursor, Codex…), même si tu débutes.
 date: 2026-10-13
+image: /rea/og-card.png
 ---
 
 Reverse Engineer Anything (REA) est un outil open source qui donne à ton agent IA (Claude Code, Cursor, Codex…) des outils de reverse engineering. Tu lui montres une appli, tu lui demandes comment une fonctionnalité marche, et il va chercher la réponse dans l'appli elle-même, avec les preuves.
